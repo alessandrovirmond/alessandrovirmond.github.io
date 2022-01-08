@@ -1,0 +1,152 @@
+header, nav{
+    background-color: white;
+    padding: 1px;
+}
+
+#logo{
+    border-radius: 30px;
+}
+
+.borda-esquerda {
+    border-style: solid;
+    border-bottom-width:0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0.5px;
+    padding-left: 30px;
+}
+
+h1{
+    font-size: 30px;
+}
+
+#menu ul li{
+    display: inline;
+    margin:20px;
+}
+
+body{
+    background-color: #e7e7e7;
+    justify-content: space-between;
+}
+
+.branco{
+    background-color: white;
+    width: 400px;
+    margin-top: 30px;
+
+}
+
+.vertical{
+    width: 400px;
+    margin-top: 0px;
+} 
+
+
+.branco > p{
+    margin-top: 0px;
+}
+
+img {
+    margin: 20px 20px 10px 0px;
+    text-align: left;
+}
+
+.ladin{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    padding-left: 10px;
+}
+
+.lado{
+    display: flex;
+    align-items: center;
+}
+
+
+#container-a, #container-b {
+    display: inline-block;
+    width: 600px;
+    height: 500px;
+}
+
+main{
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    height: 2250px;
+}
+
+.margem-left{
+    margin-left: 50px;
+    margin-bottom: 0px;
+}
+#container-b > section{
+    margin-left: 15px;
+    margin-top: 70px;
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 20px;
+    padding-top: 25px;
+    height: 620px;
+    width: 600px;
+}
+
+.divido{
+    display: inline-flex;
+    justify-content: space-around;
+    border-bottom: solid;
+    border-width: 0.5px;
+    border-color: rgb(189, 189, 189);
+
+}
+
+h2, h4{
+    display:inline-block;
+}
+
+.borda{
+    border-style: solid;
+    border-bottom-width: 0.5px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+footer{
+    padding: 50px;
+    display: flex;
+}
+
+footer > a {
+    padding-left: 400px;
+}
+
+.subparticao{
+    border-left: solid;
+    border-left-width: 0.5px;
+    border-color: rgb(189, 189, 189);
+    text-align: right;
+}
+
+.perfil > img{
+    border-radius: 50px;
+    padding: 5px;
+}
+.perfil > p{
+    padding-top: 17px;
+
+}
+
+.perfil{
+    display: inline-flex;
+}
+
+.ladin > img{
+    border-radius: 100px;
+}
