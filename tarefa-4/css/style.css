@@ -27,6 +27,7 @@ h5{
 
 body{
     font-family:sans-serif;
+    margin: 0px;
 }
 nav {
     display: inline-block;
