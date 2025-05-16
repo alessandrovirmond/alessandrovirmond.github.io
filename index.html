@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfólio de Alessandro Virmond, desenvolvedor e estudante de Sistemas de Informação">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Alessandro Virmond</title>
+</head>
+
+<body>
+    <header class="portfolio-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <span>Alessandro</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Início</a></li>
+                <li><a href="#projects" class="nav-link">Projetos</a></li>
+                <li><a href="#jobs" class="nav-link">Experiências</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <section id="about">
+                    <div class="home">
+                        <h1>Alessandro Virmond</h1>
+                        <p>
+                            Desde pequeno, sempre fui curioso, buscando entender como as coisas funcionam e o porquê de tudo.
+                            Essa curiosidade me levou ao mundo da tecnologia e do desenvolvimento de software, onde encontrei
+                            minha verdadeira paixão, por isso estou cursando Sistemas de informação na faculdade Estácio de Sá, 
+                            onde tenho desenvolvido minhas habilidades e meu conhecimento na área da tecnologia. <br>
+                            Sou natural da cidade de Nova Friburgo localizada na região serrana do Rio de Janeiro, tenho 26 anos e
+                            acredito que a inovação está na curiosidade e no desejo constante de aprender, e é isso que me motiva.  
+                        </p>
+                </section>
+                <div class="photo-gallery">
+                    <div class="gallery-container">
+                        <div class="gallery-loading">
+                            <div class="spinner"></div>
+                        </div>
+                        <img src="assets/alessandro_no_lab.jpg" alt="Alessandro Virmond no evento de tecnologia"
+                            class="gallery-img active">
+                        <img src="assets/alessandro_no_rog-e.jpg"
+                            alt="Alessandro Virmond no ambiente de trabalho" class="gallery-img">
+                        <div class="gallery-controls">
+                            <button class="gallery-prev" aria-label="Imagem anterior">❮</button>
+                            <button class="gallery-next" aria-label="Próxima imagem">❯</button>
+                        </div>
+                        <div class="gallery-indicators"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container-projects">
+                <h2>Projetos</h2>
+                <p>
+                    Aqui estão alguns dos meus projetos mais recentes. Cada um deles representa uma
+                    oportunidade de aprendizado e crescimento na minha jornada como desenvolvedor. Sinta-se à
+                    vontade para explorar e entrar em contato se tiver alguma dúvida ou feedback!
+                </p>
+
+                <div class="projects-grid">
+                    <div class="projects-card">
+                        <img src="src/images/pngwing.com.png" alt="Conversor de Moedas" loading="lazy">
+                        <h3>Conversor de Moedas</h3>
+                        <p>Um conversor de moedas que utiliza API para obter cotações em tempo real e realiza cálculos
+                            de conversão entre diferentes moedas.</p>
+                        <a href="projetos/conversor/index.html" class="btn" target="_blank">Ver projeto</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="jobs">
+            <div class="container-experiences">
+                <h2>Experiências</h2>
+                <div class="experiences">
+                    <div class="experience-card">
+                        <h3>RFID Brasil</h3>
+                        <ul>
+                            <li>Montagem de sistemas de segurança eletromagnéticos e portais RFID</li>
+                            <li>Instalação de sistemas de segurança eletromagnéticos e portais RFID</li>
+                            <li>Reparo e manuteção de equipamentos eletromagnéticos</li>
+                            <li>Controle de entrada/saída de mercadorias</li>
+                        </ul>
+                    </div>
+                    <div class="experience-card">
+                        <h3>Trend Sistemas</h3>
+                        <ul>
+                            <li>Suporte ao cliente em sistema de vendas.</li>
+                            <li>Implantação do sistema.</li>
+                            <li>Formatação e manutenção de computadores.</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <h2>Entre em contato</h2>
+            <section id="contact">
+                <p>
+                    Estou sempre aberto a novas oportunidades, projetos desafiadores e conversas sobre tecnologia. Se você tem uma ideia, proposta ou quer apenas bater um papo sobre desenvolvimento, será um prazer conectar! <br>
+                    Me envie uma mensagem por qualquer um dos canais abaixo que responderei o mais breve possível.
+                </p>
+                <div class="contact">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/pedro-henrique-c-72a86911a/" target="_blank"
+                                aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:pedrino022@gmail.com" aria-label="Enviar email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/5522981218618" aria-label="WhatsApp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/pedrojano" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
