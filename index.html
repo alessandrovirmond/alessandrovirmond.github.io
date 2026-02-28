@@ -1,166 +1,119 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfólio de Alessandro Virmond, desenvolvedor e estudante de Sistemas de Informação">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Alessandro Virmond</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Precisamos Conversar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #dcdcdc;
+            font-family: 'Lora', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        h1 {
+            font-weight: 400;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .foto-casal {
+            width: 100%;
+            border-radius: 8px;
+            filter: grayscale(100%);
+            opacity: 0.8;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        a.btn {
+            text-decoration: none;
+            padding: 18px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 100%;
+            display: block;
+        }
+
+        .btn-triste {
+            background-color: transparent;
+            color: #777;
+            border: 1px solid #444;
+        }
+
+        .btn-esperanca {
+            background-color: #fff;
+            color: #121212;
+            font-weight: 600;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header class="portfolio-header">
-        <nav class="main-nav">
-            <div class="logo">
-                <span>Alessandro</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link active">Início</a></li>
-                <li><a href="#projects" class="nav-link">Projetos</a></li>
-                <li><a href="#jobs" class="nav-link">Experiências</a></li>
-                <li><a href="#contact" class="nav-link">Contato</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-       <section id="home">
     <div class="container">
-        <section id="about">
-            <div class="home">
-                <div>
-                    <h1>Alessandro Virmond</h1>
-                    <h2>Desenvolvedor de Software</h2>
-                </div>
-                <div class="technologies">
-                    <p align="center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="50" height="50" alt="Flutter" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="50" height="50" alt="TypeScript" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" height="50" alt="React" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" width="50" height="50" alt="Angular" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="50" height="50" alt="Vue.js" />
-                    </p>
-                </div>
-                <ul class="list-about">
-                    <li>🎓 <strong>Bacharel em Sistemas de Informação</strong> - CEFET</li>
-                    <li>💼 <strong>Desenvolvedor Flutter</strong> na RFID Brasil</li>
-                    <li>🌍 Nova Friburgo - RJ</li>
-                </ul>
-                
-            </div>
-        </section>
-        <div class="photo-gallery">
-            <div class="gallery-container">
-                <div class="gallery-loading">
-                    <div class="spinner"></div>
-                </div>
-                <img src="assets/alessandro_no_lab.jpg" alt="Alessandro Virmond no evento de tecnologia"
-                    class="gallery-img active">
-                <img src="assets/alessandro_no_rog-e.jpg"
-                    alt="Alessandro Virmond no ambiente de trabalho" class="gallery-img">
-                <div class="gallery-controls">
-                    <button class="gallery-prev" aria-label="Imagem anterior">❮</button>
-                    <button class="gallery-next" aria-label="Próxima imagem">❯</button>
-                </div>
-                <div class="gallery-indicators"></div>
-            </div>
+        <h1>O que ficou em mim</h1>
+        <p>Estes últimos dias têm sido de muito vazio e reflexão, repensei em todas circunstancias que nos levaram até
+            aqui. Vi que voce manteve nossas fotos nos insta, nao sei se esqueceu ou ainda sobrou algo bom de mim ai dentro, mas
+            mesmo sem saber o por que manteve as fotos, criei um fio de esperanca e fiz isso aqui. Caso vc realmente so tenha esquecido e
+            nao sinta mais nada de bom por mim, eu peco desculpas pelo incomodo e que clique na opcao de cima que eu vou
+            finalmente te deixar em paz. Esta é a minha forma de tentar te mostrar o que se passa aqui dentro e tentar
+            de recomeçar com a garota que eu amo.</p>
+
+        <img src="./love_page/assets/foto-6.jpeg" alt="Nós dois" class="foto-casal">
+
+        <div class="botoes">
+            <a href="./sad_page/index.html" class="btn btn-triste">Não gosto mais, perdi o interesse</a>
+            <a href="./love_page/index.html" class="btn btn-esperanca">Apesar de estar mal, ainda gosto de você</a>
         </div>
     </div>
-</section>
-
-
-        <section id="projects">
-            <div class="container-projects">
-                <h2>Projetos</h2>
-                <p>
-                    Aqui estão alguns dos meus projetos mais recentes. Cada um deles representa uma
-                    oportunidade de aprendizado e crescimento na minha jornada como desenvolvedor. Sinta-se à
-                    vontade para explorar e entrar em contato se tiver alguma dúvida ou feedback!
-                </p>
-
-                <div class="projects-grid">
-                    <div class="projects-card">
-                        <img src="src/images/pngwing.com.png" alt="Conversor de Moedas" loading="lazy">
-                        <h3>Conversor de Moedas</h3>
-                        <p>Um conversor de moedas que utiliza API para obter cotações em tempo real e realiza cálculos
-                            de conversão entre diferentes moedas.</p>
-                        <a href="projetos/conversor/index.html" class="btn" target="_blank">Ver projeto</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="jobs">
-            <div class="container-experiences">
-                <h2>Experiências</h2>
-                <div class="experiences">
-                    <div class="experience-card">
-                        <h3>RFID Brasil</h3>
-                        <ul>
-                            <li>Montagem de sistemas de segurança eletromagnéticos e portais RFID</li>
-                            <li>Instalação de sistemas de segurança eletromagnéticos e portais RFID</li>
-                            <li>Reparo e manuteção de equipamentos eletromagnéticos</li>
-                            <li>Controle de entrada/saída de mercadorias</li>
-                        </ul>
-                    </div>
-                    <div class="experience-card">
-                        <h3>Trend Sistemas</h3>
-                        <ul>
-                            <li>Suporte ao cliente em sistema de vendas.</li>
-                            <li>Implantação do sistema.</li>
-                            <li>Formatação e manutenção de computadores.</li>
-                        </ul>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <h2>Entre em contato</h2>
-            <section id="contact">
-                <p>
-                    Estou sempre aberto a novas oportunidades, projetos desafiadores e conversas sobre tecnologia. Se você tem uma ideia, proposta ou quer apenas bater um papo sobre desenvolvimento, será um prazer conectar! <br>
-                    Me envie uma mensagem por qualquer um dos canais abaixo que responderei o mais breve possível.
-                </p>
-                <div class="contact">
-                    <ul>
-                        <li>
-                            <a href="https://www.linkedin.com/in/pedro-henrique-c-72a86911a/" target="_blank"
-                                aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:pedrino022@gmail.com" aria-label="Enviar email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://wa.me/5522981218618" aria-label="WhatsApp" target="_blank">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/pedrojano" target="_blank" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </footer>
-    </main>
-
-    <script src="script.js"></script>
 </body>
 
 </html>

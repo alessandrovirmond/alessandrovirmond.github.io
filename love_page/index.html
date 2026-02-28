@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nosso Recomeço 💖</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Nunito:wght@300;400;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FFF0F5;
+            color: #4A4A4A;
+            font-family: 'Nunito', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .hearts-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            color: #FFB6C1;
+            opacity: 0.6;
+            animation: floatUp 10s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            80% {
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateY(-10vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Dancing Script', cursive;
+            color: #D6336C;
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .sessao-motivo {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px 20px;
+            width: 100%;
+        }
+
+        .texto-motivo {
+            background: #ffffff;
+            padding: 25px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(214, 51, 108, 0.1);
+        }
+
+        .texto-motivo h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .texto-motivo p {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .imagem-motivo {
+            width: 100%;
+            text-align: center;
+        }
+
+        .imagem-motivo img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            border: 4px solid #fff;
+        }
+
+        /* Efeito alternado nas polaroids para mobile */
+        .sessao-motivo:nth-child(odd) .imagem-motivo img {
+            transform: rotate(-2deg);
+        }
+
+        .sessao-motivo:nth-child(even) .imagem-motivo img {
+            transform: rotate(2deg);
+        }
+
+        .declaracao-final {
+            background-color: #D6336C;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .declaracao-final h2 {
+            color: #fff;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .declaracao-final p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .btn-sim {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 30px auto 0;
+            padding: 18px 20px;
+            background-color: #fff;
+            color: #D6336C;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hearts-bg" id="hearts-container"></div>
+
+    <header>
+        <h1>Ainda Há Nós 💖</h1>
+        <p class="subtitle">Se você chegou até aqui, é porque ainda resta algo de bom sobre mim aí dentro. Eu sei que
+            está magoada e confusa, mas deixa eu te lembrar dos
+            motivos pelos quais o nosso amor merece uma nova chance.</p>
+    </header>
+
+    <section class="sessao-motivo">
+        <div class="texto-motivo">
+            <h3>1. Nossa História e Conexão ✨</h3>
+            <p>Lembro do quão encantado fiquei desde os nossos primeiros encontros. Tudo fluiu de forma tão natural até
+                o namoro. Nossa atração foi genuína, muitos momentos felizes,
+                eventos com amigos, as reuniões de família, os shows, filmes e nossas viagens... Faziamos tudo juntos
+                com a alegria de quem estava conhecendo um parceiro pra vida</p>
+        </div>
+        <div class="imagem-motivo">
+            <img src="./assets/foto-1.jpeg" alt="Nosso início">
+        </div>
+    </section>
+
+    <section class="sessao-motivo">
+        <div class="texto-motivo">
+            <h3>2. Eu Conheço a Sua Essência 🗺️</h3>
+            <p>Eu conheço cada detalhe seu. Sei dos seus gostos e desgostos, da sua rotina, da sua história, das suas
+                lutas diárias
+                e dos seus maiores sonhos. Sei o quão voce é uma ótima filha, ótima neta, ótima amiga e principalmente
+                ótima companheira pra mim. De tanto observar e amar cada pedacinho seu, sinto que tenho em minhas mãos o
+                mapa exato de como te fazer a mulher mais feliz do mundo.</p>
+        </div>
+        <div class="imagem-motivo">
+            <img src="./assets/foto-2.jpeg" alt="Sua essência">
+        </div>
+    </section>
+
+    <section class="sessao-motivo">
+        <div class="texto-motivo">
+            <h3>3. O Que Aprendi Com Meus Erros 🌱</h3>
+            <p>Reconheço minhas falhas. Sei do meu ciúme extremo e do julgamento errado que fiz, e me arrependo
+                profundamente de ter te desrespeitado e perdido a cabeça, pois esse não sou eu. Entendi que nossas
+                diferenças são totalmente irrelevantes perto da nossa felicidade juntos. Faltou dedicação, parceria e
+                carinho da minha parte,
+                mas hoje carrego comigo um manual de como ser um homem muito melhor para você.</p>
+        </div>
+        <div class="imagem-motivo">
+            <img src="./assets/foto-5.jpeg" alt="Aprendendo e melhorando">
+        </div>
+    </section>
+
+    <section class="sessao-motivo">
+        <div class="texto-motivo">
+            <h3>4. Cuidar de Você em Todos os Detalhes 🤍</h3>
+            <p>Você me inspira a ser melhor em todas as áreas. Quero acolher seu emocional após um plantão ruim e
+                melhorar seu humor te levando para sair ou fazendo uma surpresa após uma semana cansativa. Quero ser sua
+                conchinha nos filmes de
+                10 minutos, realizar seus desejos libidinosos, ajudar nas tarefas da casa, te fazer massagem e cuidar
+                de você doente. Quero te apoiar financeiramente e facilitar sua vida para você estudar, trabalhar e
+                continuar crescendo, com um homem que te apoie e te auxilide de verdade. Estarei aqui para ser seu maior
+                parceiro.</p>
+        </div>
+        <div class="imagem-motivo">
+            <img src="./assets/foto-3.jpeg" alt="Cuidando de você">
+        </div>
+    </section>
+
+    <section class="sessao-motivo">
+        <div class="texto-motivo">
+            <h3>5. Tudo o Que Ainda Vamos Viver ✈️</h3>
+            <p>Nosso aniversário está logo ali! Temos day uses com vistas incríveis para conhecer, viagens para cidades
+                interessantes, shows no interior para curtir, praias lindas para visitar e lugares ótimos para comer.
+                Ainda quero assistir aos melhores filmes do ano com você, te dar presentes dos bons aos singelos, gravar
+                seus vídeos e
+                tirar aquelas fotos que só eu sei. Quero desfrutar o melhor da vida ao seu lado.</p>
+        </div>
+        <div class="imagem-motivo">
+            <img src="./assets/foto-4.jpeg" alt="Nosso futuro juntos">
+        </div>
+    </section>
+
+    <section class="declaracao-final">
+        <h2>Minha Declaração pra Você 🌷</h2>
+        <p> A distância me fez enxergar tudo com clareza. Sei que
+            palavras não são suficientes, por isso te fiz essa
+            página: para provar que estou disposto a ter atitudes diferentes e a colocar em prática tudo o que aprendi
+            sobre nós.
+        <p>Não quero viver o superficial dessa vida, e quando amo alguem como eu amo voce sou capaz de tudo pra te ver
+            feliz, ate deixar ir... Eu sei que nao quer me ver e nem falar comigo, entendo que esta muito machucada. Mas
+            aonde há amor, há
+            esperança, e
+            vou esperar o tempo que for pra te ter de volta se for o caso. Não precisa falar comigo se não quiser, o botao abaixo
+            leva pro meu wpp, mas responda quando
+            achar melhor</p>
+        <p>Eu te amo e te peço uma nova chance. Não para voltarmos a ser o que éramos, mas para
+            sermos uma versão muito mais forte, madura e feliz de nós mesmos.</p>
+
+        <p><strong>Topa recomeçar esse amor comigo, dessa vez de verdade?</strong></p>
+
+        <a href="https://wa.me/5521976807551" class="btn-sim">Sim, eu topo! 🥰</a>
+    </section>
+
+    <script>
+        // Script ajustado para gerar menos corações em telas menores, evitando poluição visual
+        const container = document.getElementById('hearts-container');
+        for (let i = 0; i < 15; i++) {
+            let heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 8 + 6) + 's';
+            heart.style.animationDelay = (Math.random() * 5) + 's';
+            heart.style.fontSize = (Math.random() * 15 + 10) + 'px';
+            container.appendChild(heart);
+        }
+    </script>
+</body>
+
+</html>
