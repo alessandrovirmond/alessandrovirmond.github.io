@@ -1,118 +1,597 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Precisamos Conversar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alessandro Virmond | Desenvolvedor de Software</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-hover: #0284c7;
+            --border-color: #334155;
+        }
 
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #dcdcdc;
-            font-family: 'Lora', serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
         }
 
         .container {
-            width: 100%;
-            max-width: 400px;
-            animation: fadeIn 2s ease-in;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            text-align: left;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+        }
+
+        .header-info {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         h1 {
-            font-weight: 400;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
             color: #ffffff;
         }
 
-        p {
-            font-size: 1.05rem;
-            line-height: 1.5;
-            margin-bottom: 25px;
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
         }
 
-        .foto-casal {
-            width: 100%;
+        .contact-info {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background: var(--surface-color);
+            padding: 30px;
             border-radius: 8px;
-            filter: grayscale(100%);
-            opacity: 0.8;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .botoes {
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .about-text {
+            color: var(--text-muted);
+            text-align: justify;
+        }
+
+        .quick-bio {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+        
+        .quick-bio li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quick-bio strong {
+            color: var(--accent-color);
+        }
+
+        .tech-icons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tech-icons img {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .tech-icons img:hover {
+            transform: translateY(-4px) scale(1.1);
+        }
+
+        .hobbies-section {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            width: 100%;
         }
 
-        a.btn {
-            text-decoration: none;
-            padding: 18px 20px;
-            border-radius: 8px;
+        .hobbies-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hobbies-list-wrapper {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hobbies-list {
+            list-style-type: none;
+            padding-left: 0;
+            color: var(--text-muted);
+        }
+
+        .hobbies-list li {
+            margin-bottom: 12px;
             font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .photo-carrousel-wrapper {
+            width: 300px;
+            flex-shrink: 0;
+        }
+
+        .photo-gallery {
             width: 100%;
-            display: block;
+            overflow-x: hidden;
+            display: flex;
+            gap: 0;
+            padding-bottom: 0;
+            scroll-snap-type: x mandatory;
+            border-radius: 8px;
+            border: 2px solid var(--border-color);
         }
 
-        .btn-triste {
-            background-color: transparent;
-            color: #777;
-            border: 1px solid #444;
+        .photo-gallery img {
+            height: 350px;
+            width: 100%;
+            min-width: 100%;
+            object-fit: cover;
+            scroll-snap-align: center;
+            transition: transform 0.3s ease;
         }
 
-        .btn-esperanca {
-            background-color: #fff;
-            color: #121212;
-            font-weight: 600;
+        .photo-gallery img:hover {
+            transform: scale(1.02);
+        }
+        
+        .photo-gallery:hover {
+            border-color: var(--accent-color);
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #e2e8f0;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: var(--bg-color);
+            color: var(--text-main);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .experience-item, .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .experience-item:last-child, .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .job-company {
+            color: var(--text-muted);
+            font-weight: normal;
+        }
+
+        .job-date {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+        }
+
+        ul.experience-list {
+            list-style-position: inside;
+            color: var(--text-muted);
+        }
+
+        ul.experience-list li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
             }
+            .profile-photo {
+                width: 140px;
+                height: 140px;
+            }
+            .contact-info {
+                justify-content: center;
+            }
+            section {
+                padding: 20px;
+            }
+            .tech-icons {
+                justify-content: center;
+            }
+            .hobbies-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .hobbies-list-wrapper {
+                min-width: 100%;
+            }
+            .photo-carrousel-wrapper {
+                width: 100%;
+            }
+            .photo-gallery img {
+                height: 300px;
+            }
+        }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 10px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .quick-bio li {
+                font-size: 0.95rem;
+                flex-wrap: wrap;
+            }
+            .job-title {
+                font-size: 1.1rem;
+            }
+            .job-header {
+                flex-direction: column;
+            }
+            .photo-gallery img {
+                height: 250px;
             }
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>O que ficou em mim</h1>
-        <p>Estes últimos dias têm sido de muito vazio e reflexão. Repensei em todas as circunstâncias que nos levaram
-            até aqui. Vi que você manteve nossas fotos no Insta. Não sei se esqueceu ou se ainda sobrou algo bom sobre mim
-            aí dentro, mas, mesmo sem saber o porquê, criei um fio de esperança e fiz isso aqui. Caso você realmente só
-            tenha esquecido e não sinta mais nada de bom por mim, eu peço desculpas pelo incômodo e peço que clique na
-            opção de cima, que eu vou finalmente te deixar em paz, se nao clique no botão debaixo e leia até o final. Esta é a minha forma de tentar te mostrar o que se
-            passa aqui dentro e tentar recomeçar com a garota que eu amo.</p>
-        <img src="./love_page/assets/foto-6.jpeg" alt="Nós dois" class="foto-casal">
 
-        <div class="botoes">
-            <a href="./sad_page/index.html" class="btn btn-triste">Não quero mais, perdi o interesse</a>
-            <a href="./love_page/index.html" class="btn btn-esperanca">Apesar de estar mal, ainda gosto de você</a>
+<div class="container">
+    <header>
+        <img src="./assets/foto-1.png" alt="Alessandro Virmond" class="profile-photo">
+        
+        <div class="header-info">
+            <h1>Alessandro Virmond</h1>
+            <div class="subtitle">Desenvolvedor de Software</div>
+            <div class="contact-info">
+                <span>Nova Friburgo, RJ</span>
+                <span>&bull;</span>
+                <span>(21) 97680-7551</span>
+                <span>&bull;</span>
+                <a href="mailto:avirmond2000@gmail.com">avirmond2000@gmail.com</a>
+            </div>
+            <div class="contact-info" style="margin-top: 10px;">
+                <a href="https://linkedin.com/in/alessandrovirmond" target="_blank">LinkedIn</a>
+                <span>&bull;</span>
+                <a href="https://github.com/alessandrovirmond" target="_blank">GitHub</a>
+                <span>&bull;</span>
+                <a href="https://vercel.com/alessandrovirmonds-projects" target="_blank">Vercel (Projetos)</a>
+            </div>
         </div>
-    </div>
-</body>
+    </header>
 
+    <section>
+        <h2>Resumo Profissional</h2>
+        
+        <ul class="quick-bio">
+            <li>🎓 <strong>Bacharel em Sistemas de Informação</strong> - CEFET-RJ</li>
+            <li>💼 <strong>Desenvolvedor Flutter</strong> na RFID Brasil</li>
+            <li>🌍 <strong>Nova Friburgo - RJ</strong></li>
+        </ul>
+
+        <p class="about-text">
+            Atuo na criação de soluções multiplataforma (Web, Mobile e Desktop) com <strong>Flutter</strong> e <strong>React</strong>. Foco na construção de aplicações robustas, aplicando princípios de Clean Code e arquitetura escalável para garantir alta manutenibilidade. Profissional colaborativo, com facilidade para atuar em times ágeis e resolver problemas complexos, visando sempre a entrega de valor e a excelência na experiência do usuário.
+        </p>
+
+        <div class="tech-icons">
+            <span style="color: var(--text-muted); font-size: 0.95rem; margin-right: 5px;">Principais Tecnologias:</span>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="30" height="30" alt="Flutter" title="Flutter" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="30" height="30" alt="TypeScript" title="TypeScript" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30" height="30" alt="React" title="React" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" width="30" height="30" alt="Angular" title="Angular" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="30" height="30" alt="Vue.js" title="Vue.js" />
+        </div>
+    </section>
+
+    <section class="hobbies-section">
+        <h2>Além do Código</h2>
+        
+        <div class="hobbies-container">
+            <div class="hobbies-list-wrapper">
+                <p class="about-text" style="margin-bottom: 15px;">
+                    Acredito que um bom profissional é feito de boas vivências. Quando não estou "codando", é aqui que você me encontra:
+                </p>
+                <ul class="hobbies-list">
+                    <li>⭐ Botafoguense apaixonado</li>
+                    <li>⚽ Peladeiro (sagrado aos domingos de manhã)</li>
+                    <li>🏋️‍♂️ Em busca do shape na musculação</li>
+                    <li>🎮 Fifeiro de plantão (EA FC nas jogatinas com o irmão)</li>
+                    <li>🎤 Freestyleiro (arriscando umas rimas de rap)</li>
+                    <li>🏖️ Amante de uma boa praia</li>
+                    <li>🧠 Apaixonado por aprender (das novas tecnologias ao estudo diário de inglês)</li>
+                </ul>
+            </div>
+
+            <div class="photo-carrousel-wrapper">
+                <div class="photo-gallery" id="carrossel">
+                    <img src="./assets/foto-7.jpeg" alt="Foto 3">
+                    <img src="./assets/foto-3.jpeg" alt="Foto 2">
+                    <img src="./assets/foto-5.jpeg" alt="Foto 4">
+                    <img src="./assets/foto-2.jpeg" alt="Foto 1">
+                    <img src="./assets/foto-6.jpeg" alt="Foto 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Competências Técnicas</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Mobile & Cross-Platform</h3>
+                <div class="tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">Dart</span>
+                    <span class="tag">Riverpod</span>
+                    <span class="tag">BLoC</span>
+                    <span class="tag">Clean Architecture</span>
+                    <span class="tag">Method Channels</span>
+                    <span class="tag">Offline-First</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Front-End Web</h3>
+                <div class="tags">
+                    <span class="tag">React.js</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">Redux Toolkit</span>
+                    <span class="tag">Context API</span>
+                    <span class="tag">Tailwind CSS</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Back-End & Integração</h3>
+                <div class="tags">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">RESTful APIs</span>
+                    <span class="tag">WebSockets</span>
+                    <span class="tag">MQTT</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">SSO / JWT</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>DevOps & Qualidade</h3>
+                <div class="tags">
+                    <span class="tag">Git Flow</span>
+                    <span class="tag">TDD</span>
+                    <span class="tag">CI/CD</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Figma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Experiência Profissional</h2>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <div class="job-title">Desenvolvedor de Software <span class="job-company">| RFID Brasil</span></div>
+                <div class="job-date">Novembro 2023 – Atual</div>
+            </div>
+            <ul class="experience-list">
+                <li>Desenvolvimento end-to-end de soluções multiplataforma (Web, Windows e Android) utilizando Flutter, garantindo alta performance e fidelidade de UI/UX.</li>
+                <li>Engenharia de plugins customizados para comunicação direta com hardware (leitores RFID), utilizando Method Channels para integração nativa.</li>
+                <li>Implementação de estratégia Offline-First robusta, com sincronização automática de dados (Sync) entre banco local e nuvem para operação em áreas sem conectividade.</li>
+                <li>Desenvolvimento de arquitetura para sistemas IoT escaláveis, utilizando protocolos de comunicação em tempo real (MQTT e WebSockets).</li>
+                <li>Criação de dashboards gerenciais interativos e módulos de relatórios para suporte à decisão estratégica.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-header">
+                <div class="job-title">Estágio em Desenvolvimento de Software <span class="job-company">| RFID Brasil</span></div>
+                <div class="job-date">Maio 2023 – Outubro 2023</div>
+            </div>
+            <ul class="experience-list">
+                <li>Atuação na modernização e refatoração de código legado, aplicando princípios de SOLID e Clean Code para reduzir a dívida técnica e facilitar manutenções futuras.</li>
+                <li>Desenvolvimento de componentes de interface (UI) responsivos e reutilizáveis, garantindo consistência visual e boa usabilidade (UX) em diferentes dispositivos.</li>
+                <li>Diagnóstico e resolução ágil de bugs em ambiente de produção e homologação.</li>
+                <li>Elaboração de documentação técnica e realização de treinamentos para capacitação de usuários finais no uso do sistema.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projetos em Destaque</h2>
+        <div class="project-item">
+            <div class="job-header">
+                <div class="job-title">Climapp</div>
+                <div class="job-date">React Native & Expo</div>
+            </div>
+            <p class="about-text">Aplicativo mobile focado na consulta e previsão do tempo, desenvolvido com o ecossistema React Native, aplicando consumo de APIs e gestão de estado moderna.</p>
+        </div>
+        <div class="project-item">
+            <div class="job-header">
+                <div class="job-title">RFID Fácil</div>
+                <div class="job-date"><a href="http://rfidfacil.com" target="_blank">rfidfacil.com</a></div>
+            </div>
+            <p class="about-text">Aplicação web voltada para soluções e gestão no ecossistema de identificação por radiofrequência, focando em usabilidade e performance web.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Formação e Certificações</h2>
+        
+        <div class="experience-item">
+            <div class="job-header" style="margin-bottom: 5px;">
+                <div class="job-title">Bacharelado em Sistemas de Informação</div>
+                <div class="job-date">Conclusão: Julho 2025</div>
+            </div>
+            <div class="job-company">CEFET-RJ – Centro Federal de Educação Tecnológica Celso Suckow da Fonseca</div>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-header" style="margin-bottom: 5px;">
+                <div class="job-title">Ensino Médio / Fundamental Completo</div>
+                <div class="job-date">Março 2012 – Dezembro 2019</div>
+            </div>
+            <div class="job-company">Colégio Pedro II – Campus Humaitá II</div>
+        </div>
+
+        <div>
+            <div class="job-title" style="margin-top: 15px; margin-bottom: 5px;">Certificações</div>
+            <ul>
+                <li><strong>Scrum Fundamentals Certified (SFC)</strong> – SCRUMstudy</li>
+                <li><strong>Formação Iniciante em Programação</strong> – Alura</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Alessandro Virmond. Desenvolvido com código limpo.</p>
+    </footer>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const carrossel = document.getElementById("carrossel");
+        let scrollAmount = 0;
+
+        setInterval(() => {
+            const step = carrossel.clientWidth; 
+            const maxScroll = carrossel.scrollWidth - step; 
+            
+            scrollAmount += step;
+
+            if (scrollAmount > maxScroll) {
+                scrollAmount = 0;
+            }
+
+            carrossel.scrollTo({
+                top: 0,
+                left: scrollAmount,
+                behavior: "smooth"
+            });
+        }, 4000); 
+    });
+</script>
+
+</body>
 </html>

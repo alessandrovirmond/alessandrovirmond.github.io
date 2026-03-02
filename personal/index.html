@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Precisamos Conversar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #dcdcdc;
+            font-family: 'Lora', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        h1 {
+            font-weight: 400;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .foto-casal {
+            width: 100%;
+            border-radius: 8px;
+            filter: grayscale(100%);
+            opacity: 0.8;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        a.btn {
+            text-decoration: none;
+            padding: 18px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 100%;
+            display: block;
+        }
+
+        .btn-triste {
+            background-color: transparent;
+            color: #777;
+            border: 1px solid #444;
+        }
+
+        .btn-esperanca {
+            background-color: #fff;
+            color: #121212;
+            font-weight: 600;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>O que ficou em mim</h1>
+        <p>Estes últimos dias têm sido de muito vazio e reflexão. Repensei em todas as circunstâncias que nos levaram
+            até aqui. Vi que você manteve nossas fotos no Insta. Não sei se esqueceu ou se ainda sobrou algo bom sobre mim
+            aí dentro, mas, mesmo sem saber o porquê, criei um fio de esperança e fiz isso aqui. Caso você realmente só
+            tenha esquecido e não sinta mais nada de bom por mim, eu peço desculpas pelo incômodo e peço que clique na
+            opção de cima, que eu vou finalmente te deixar em paz, se nao clique no botão debaixo e leia até o final. Esta é a minha forma de tentar te mostrar o que se
+            passa aqui dentro e tentar recomeçar com a garota que eu amo.</p>
+        <img src="./love_page/assets/foto-6.jpeg" alt="Nós dois" class="foto-casal">
+
+        <div class="botoes">
+            <a href="./sad_page/index.html" class="btn btn-triste">Não quero mais, perdi o interesse</a>
+            <a href="./love_page/index.html" class="btn btn-esperanca">Apesar de estar mal, ainda gosto de você</a>
+        </div>
+    </div>
+</body>
+
+</html>
