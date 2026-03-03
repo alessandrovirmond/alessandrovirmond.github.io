@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alessandro Virmond | Desenvolvedor de Software</title>
+    <link rel="icon" type="image/png" sizes="120x120" href="./assets/logo-av.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .header-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-logo {
+            max-height: 100px;
+            width: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            max-height: 80px;
+            width: auto;
+        }
+
+        @media (max-width: 600px) {
+            .header-title-wrapper {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .header-title-wrapper h1 {
+                order: 1;
+            }
+            
+            .header-logo {
+                order: 2;
+                max-height: 60px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -14,7 +57,11 @@
         <img src="./assets/foto-1.png" alt="Alessandro Virmond" class="profile-photo">
         
         <div class="header-info">
-            <h1>Alessandro Virmond</h1>
+            <div class="header-title-wrapper">
+                <h1>Alessandro Virmond</h1>
+                <img src="./assets/logo-av.png" alt="Logo AV" class="header-logo">
+            </div>
+            
             <div class="subtitle">Desenvolvedor de Software</div>
             <div class="contact-info">
                 <a href="https://maps.google.com/?q=Nova+Friburgo,+RJ" target="_blank"><i class="fas fa-map-marker-alt"></i> Nova Friburgo, RJ</a>
@@ -37,29 +84,24 @@
 
     <section>
         <h2>Resumo Profissional</h2>
-        
         <ul class="quick-bio">
             <li>🎓 <strong>Bacharel em Sistemas de Informação</strong> - CEFET-RJ</li>
             <li>💼 <strong>Desenvolvedor Flutter</strong> na RFID Brasil</li>
-            <li>🌍 <strong>Nova Friburgo - RJ</strong></li>
         </ul>
-
         <p class="about-text">
             Atuo na criação de soluções multiplataforma (Web, Mobile e Desktop) com <strong>Flutter</strong> e <strong>React</strong>. Foco na construção de aplicações robustas, aplicando princípios de Clean Code e arquitetura escalável para garantir alta manutenibilidade. Profissional colaborativo, com facilidade para atuar em times ágeis e resolver problemas complexos, visando sempre a entrega de valor e a excelência na experiência do usuário.
         </p>
-
         <div class="tech-icons">
             <span style="color: var(--text-muted); font-size: 0.95rem; margin-right: 5px;">Principais Tecnologias:</span>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="30" height="30" alt="Flutter" title="Flutter" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30" height="30" alt="React" title="React" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" width="30" height="30" alt="Angular" title="Angular" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="30" height="30" alt="Vue.js" title="Vue.js" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="30" height="30" alt="Flutter" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30" height="30" alt="React" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" width="30" height="30" alt="Angular" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="30" height="30" alt="Vue.js" />
         </div>
     </section>
 
     <section class="hobbies-section">
         <h2>Além do Código</h2>
-        
         <div class="hobbies-container">
             <div class="hobbies-list-wrapper">
                 <p class="about-text" style="margin-bottom: 15px;">
@@ -75,13 +117,11 @@
                     <li>🧠 Apaixonado por aprender</li>
                 </ul>
             </div>
-
             <div class="photo-carrousel-wrapper">
                 <div class="photo-gallery" id="carrossel">
-                    <img src="./assets/foto-7.jpeg" alt="Foto 3">
+                    <img src="./assets/foto-7.jpeg" alt="Foto 1">
                     <img src="./assets/foto-3.jpeg" alt="Foto 2">
-                    <img src="./assets/foto-5.jpeg" alt="Foto 4">
-                    <img src="./assets/foto-2.jpeg" alt="Foto 1">
+                    <img src="./assets/foto-2.jpeg" alt="Foto 4">
                     <img src="./assets/foto-6.jpeg" alt="Foto 5">
                 </div>
             </div>
@@ -140,83 +180,26 @@
 
     <section>
         <h2>Experiência Profissional</h2>
-        
         <div class="experience-item">
             <div class="job-header">
                 <div class="job-title">Desenvolvedor de Software <span class="job-company">| RFID Brasil</span></div>
                 <div class="job-date">Novembro 2023 – Atual</div>
             </div>
             <ul class="experience-list">
-                <li>Desenvolvimento end-to-end de soluções multiplataforma (Web, Windows e Android) utilizando Flutter, garantindo alta performance e fidelidade de UI/UX.</li>
-                <li>Engenharia de plugins customizados para comunicação direta com hardware (leitores RFID), utilizando Method Channels para integração nativa.</li>
-                <li>Implementação de estratégia Offline-First robusta, com sincronização automática de dados (Sync) entre banco local e nuvem para operação em áreas sem conectividade.</li>
-                <li>Desenvolvimento de arquitetura para sistemas IoT escaláveis, utilizando protocolos de comunicação em tempo real (MQTT e WebSockets).</li>
-                <li>Criação de dashboards gerenciais interativos e módulos de relatórios para suporte à decisão estratégica.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <div class="job-header">
-                <div class="job-title">Estágio em Desenvolvimento de Software <span class="job-company">| RFID Brasil</span></div>
-                <div class="job-date">Maio 2023 – Outubro 2023</div>
-            </div>
-            <ul class="experience-list">
-                <li>Atuação na modernização e refatoração de código legado, aplicando princípios de SOLID e Clean Code para reduzir a dívida técnica e facilitar manutenções futuras.</li>
-                <li>Desenvolvimento de componentes de interface (UI) responsivos e reutilizáveis, garantindo consistência visual e boa usabilidade (UX) em diferentes dispositivos.</li>
-                <li>Diagnóstico e resolução ágil de bugs em ambiente de produção e homologação.</li>
-                <li>Elaboração de documentação técnica e realização de treinamentos para capacitação de usuários finais no uso do sistema.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Projetos em Destaque</h2>
-        <div class="project-item">
-            <div class="job-header">
-                <div class="job-title">Climapp</div>
-                <div class="job-date">React Native & Expo</div>
-            </div>
-            <p class="about-text">Aplicativo mobile focado na consulta e previsão do tempo, desenvolvido com o ecossistema React Native, aplicando consumo de APIs e gestão de estado moderna.</p>
-        </div>
-        <div class="project-item">
-            <div class="job-header">
-                <div class="job-title">RFID Fácil</div>
-                <div class="job-date"><a href="http://rfidfacil.com" target="_blank">rfidfacil.com</a></div>
-            </div>
-            <p class="about-text">Aplicação web voltada para soluções e gestão no ecossistema de identificação por radiofrequência, focando em usabilidade e performance web.</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>Formação e Certificações</h2>
-        
-        <div class="experience-item">
-            <div class="job-header" style="margin-bottom: 5px;">
-                <div class="job-title">Bacharelado em Sistemas de Informação</div>
-                <div class="job-date">Conclusão: Julho 2025</div>
-            </div>
-            <div class="job-company">CEFET-RJ – Centro Federal de Educação Tecnológica Celso Suckow da Fonseca</div>
-        </div>
-
-        <div class="experience-item">
-            <div class="job-header" style="margin-bottom: 5px;">
-                <div class="job-title">Ensino Médio / Fundamental Completo</div>
-                <div class="job-date">Março 2012 – Dezembro 2019</div>
-            </div>
-            <div class="job-company">Colégio Pedro II – Campus Humaitá II</div>
-        </div>
-
-        <div>
-            <div class="job-title" style="margin-top: 15px; margin-bottom: 5px;">Certificações</div>
-            <ul>
-                <li><strong>Scrum Fundamentals Certified (SFC)</strong> – SCRUMstudy</li>
-                <li><strong>Formação Iniciante em Programação</strong> – Alura</li>
+                <li>Desenvolvimento end-to-end de soluções multiplataforma (Web, Windows e Android) utilizando Flutter.</li>
+                <li>Engenharia de plugins customizados para comunicação direta com hardware via Method Channels.</li>
+                <li>Implementação de estratégia Offline-First robusta com sincronização automática de dados.</li>
+                <li>Desenvolvimento de arquitetura para sistemas IoT escaláveis (MQTT e WebSockets).</li>
+                <li>Criação de dashboards gerenciais interativos e módulos de relatórios.</li>
             </ul>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Alessandro Virmond. Desenvolvido com código limpo.</p>
+        <div class="footer-content">
+            <img src="./assets/logo-av.png" alt="Logo AV" class="footer-logo">
+            <p>© 2026 Alessandro Virmond. Desenvolvido com código limpo.</p>
+        </div>
     </footer>
 </div>
 
@@ -224,22 +207,12 @@
     document.addEventListener("DOMContentLoaded", function() {
         const carrossel = document.getElementById("carrossel");
         let scrollAmount = 0;
-
         setInterval(() => {
             const step = carrossel.clientWidth; 
             const maxScroll = carrossel.scrollWidth - step; 
-            
             scrollAmount += step;
-
-            if (scrollAmount > maxScroll) {
-                scrollAmount = 0;
-            }
-
-            carrossel.scrollTo({
-                top: 0,
-                left: scrollAmount,
-                behavior: "smooth"
-            });
+            if (scrollAmount > maxScroll) scrollAmount = 0;
+            carrossel.scrollTo({ top: 0, left: scrollAmount, behavior: "smooth" });
         }, 4000); 
     });
 </script>
